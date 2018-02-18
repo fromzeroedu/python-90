@@ -1,5 +1,5 @@
-def my_function():
-    print('Hello World!')
+def my_function(name):
+    print('Hello ' + name)
     print('---')
 
-my_function()
+my_function('John')

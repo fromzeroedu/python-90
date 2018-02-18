@@ -1,15 +1,10 @@
-def my_function(first_name, last_name, address=None, phone=None):
-    customer_data = f'{first_name} {last_name}'
-    if address is not None:
-        customer_data += f', a:{address}'
-    if phone is not None:
-        customer_data += f', p:{phone}'
-    return customer_data
+def my_function(number_1, number_2, number_3=None):
+    if number_3 is not None:
+        return ((number_1 + number_2 + number_3)/3)
+    else:
+        return (number_1 + number_2)
 
-print(my_function('John', 'Jones'))
+print(my_function(2, 3))
 print('---')
-print(my_function('Jane', 'Jones', '12 Main Street'))
+print(my_function(2, 3, 4))
 print('---')
-print(my_function('Julia', 'Jones', '80 Elm Street', '455-322-2222'))
-print('---')
-print(my_function('Robert', 'Jones', phone='881-555-2455', address='65 Oak Street'))

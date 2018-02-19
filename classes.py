@@ -3,4 +3,4 @@ class Animal:
     print("I'm an animal")
 
 dog = Animal()
-print(f'I have {dog.legs}' legs)
+print(f'I have {dog.legs} legs')

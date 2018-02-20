@@ -4,3 +4,7 @@ class Animal:
 
 dog = Animal()
 print(f'I have {dog.legs} legs')
+
+spider = Animal()
+spider.legs = 8
+print(f'I have {spider.legs} legs')

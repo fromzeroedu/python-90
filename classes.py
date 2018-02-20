@@ -1,10 +1,9 @@
 class Animal:
-    legs = 4
-    print("I'm an animal")
+    def __init__(self, legs):
+        self.legs = legs
 
-dog = Animal()
+dog = Animal(4)
 print(f'I have {dog.legs} legs')
 
-spider = Animal()
-spider.legs = 8
+spider = Animal(8)
 print(f'I have {spider.legs} legs')

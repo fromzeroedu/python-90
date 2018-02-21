@@ -1,4 +1,6 @@
 class Animal:
+    planet = 'Earth'
+
     def __init__(self):
         self.legs = None
         self.wings = None
@@ -11,6 +13,10 @@ class Animal:
     def make_sound(self):
         return self.sound
 
+    @classmethod
+    def get_planet(cls):
+        return cls.planet
+
 class Dog(Animal):
     def __init__(self):
         self.legs = 4
@@ -20,6 +26,12 @@ class Dog(Animal):
     def is_thirsty(self):
         return 'pants'
 
+    @staticmethod
+    def get_breeds():
+        return ['Shitzu', 'Maltese', 'Poodle']
+
+print(Animal.get_planet())
+print(Dog.get_breeds())
 fido = Dog()
 print(fido.make_sound())
 print(fido.is_thirsty())

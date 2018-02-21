@@ -1,26 +1,27 @@
 class Animal:
-    def __init__(self, legs, name='The animal'):
-        self.legs = legs
-        self.moving = False
-        self.name = name
+    def __init__(self):
+        self.legs = None
+        self.wings = None
+        self.sound = None
+        self.coordinates = None
 
-    def start_moving(self):
-        self.moving = True
+    def update_coordinates(self, lat, long):
+        self.coordinates = (lat, long)
 
-    def stop_moving(self):
-        self.moving = False
+    def make_sound(self):
+        return self.sound
 
-    def moving_status(self):
-        if self.moving is True:
-            return f'{self.name} is moving'
-        else:
-            return f'{self.name} is stopped'
+class Dog(Animal):
+    def __init__(self):
+        self.legs = 4
+        self.wings = False
+        self.sound = 'barks'
 
-dog = Animal(4)
-print(f'I have {dog.legs} legs')
+    def is_thirsty(self):
+        return 'pants'
 
-spider = Animal(8, 'Charlotte')
-print(f'I have {spider.legs} legs')
-
-spider.start_moving()
-print(spider.moving_status())
+fido = Dog()
+print(fido.make_sound())
+print(fido.is_thirsty())
+fido.update_coordinates(4, 6)
+print(fido.coordinates)

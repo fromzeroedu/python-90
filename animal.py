@@ -33,7 +33,6 @@ class Dog(Animal):
 if __name__ == '__main__':
     import sys
     pluto = Dog()
-    sound = sys.argv[1]
-    if sound is not None:
-        pluto.sound = sound
+    if len(sys.argv) > 1:
+        pluto.sound = sys.argv[1]
     print(pluto.make_sound())

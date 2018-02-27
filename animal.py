@@ -29,3 +29,7 @@ class Dog(Animal):
     @staticmethod
     def get_breeds():
         return ['Shitzu', 'Maltese', 'Poodle']
+
+if __name__ == '__main__':
+    pluto = Dog()
+    pluto.is_thirsty()

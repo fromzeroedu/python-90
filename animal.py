@@ -31,5 +31,9 @@ class Dog(Animal):
         return ['Shitzu', 'Maltese', 'Poodle']
 
 if __name__ == '__main__':
+    import sys
     pluto = Dog()
-    print(pluto.is_thirsty())
+    sound = sys.argv[1]
+    if sound is not None:
+        pluto.sound = sound
+    print(pluto.make_sound())

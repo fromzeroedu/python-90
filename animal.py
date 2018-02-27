@@ -32,4 +32,4 @@ class Dog(Animal):
 
 if __name__ == '__main__':
     pluto = Dog()
-    pluto.is_thirsty()
+    print(pluto.is_thirsty())

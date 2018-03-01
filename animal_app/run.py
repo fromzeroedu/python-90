@@ -1,4 +1,4 @@
-import os, sys
+import sys
 sys.path.append('/Users/jorescobar/python_tests')
 print(sys.path)
 

@@ -1,4 +1,4 @@
-from animal.animal import Animal
+from animal_app.animal import Animal
 
 class Dog(Animal):
     def __init__(self):

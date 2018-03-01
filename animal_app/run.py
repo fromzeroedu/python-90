@@ -1,5 +1,6 @@
 import os, sys
 sys.path.append('/Users/jorescobar/python_tests')
+print(sys.path)
 
 from animal_app.canine.dog import Dog
 

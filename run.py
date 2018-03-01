@@ -1,4 +1,4 @@
-from animal.canine.dog import Dog
+from animal_app.canine.dog import Dog
 
 import sys
 pluto = Dog()

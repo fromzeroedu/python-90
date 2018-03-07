@@ -1,16 +1,8 @@
 import os, sys
 
-print('__file__:', __file__)
-script_folder_name = os.path.dirname(__file__)
-print('script folder name:', script_folder_name)
-
-parent_relative_path = os.path.join(script_folder_name, '..')
-print('parent relative path', parent_relative_path)
-
-root_path = os.path.abspath(parent_relative_path)
-print('root path', root_path)
-
-sys.path.append('/Users/jorescobar/python_tests')
+sys.path.append(os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..')
+    ))
 
 from animal_app.canine.dog import Dog
 

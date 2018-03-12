@@ -7,9 +7,8 @@ class Dog(Animal):
         self.sound = 'barks'
 
     def is_thirsty(self):
-        import pdb; pdb.set_trace()
         water_level = 0
-        return 'pants: ' + water_level
+        return f'pants: { water_level}' 
 
     @staticmethod
     def get_breeds():

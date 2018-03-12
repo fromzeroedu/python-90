@@ -11,3 +11,4 @@ pluto = Dog()
 if len(sys.argv) > 1:
     pluto.sound = sys.argv[1]
 print(pluto.make_sound())
+print(pluto.is_thirsty())

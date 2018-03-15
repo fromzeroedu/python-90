@@ -14,5 +14,10 @@ class TestAnimal(unittest.TestCase):
         animal.legs = 4
         self.assertEqual(animal.legs, 4)
 
+    def test_coordinates(self):
+        animal = Animal()
+        animal.update_coordinates(15, 4)
+        self.assertEqual(animal.coordinates, (15,4))
+
 if __name__ == '__main__':
     unittest.main()

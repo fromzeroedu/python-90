@@ -1,12 +1,18 @@
+import os, sys
 import unittest
 
-class TestPythonMethods(unittest.TestCase):
+sys.path.append(os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..')
+    ))
 
-    def test_addition(self):
-        self.assertEqual(5 + 3, 8)
+from animal_app.animal import Animal
 
-    def test_substraction(self):
-        self.assertEqual(5 - 3, 1)
+class TestAnimal(unittest.TestCase):
+
+    def test_legs(self):
+        animal = Animal()
+        animal.legs = 4
+        self.assertEqual(animal.legs, 4)
 
 if __name__ == '__main__':
     unittest.main()

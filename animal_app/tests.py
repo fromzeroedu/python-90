@@ -6,6 +6,7 @@ sys.path.append(os.path.abspath(
     ))
 
 from animal_app.animal import Animal
+from animal_app.canine.dog import Dog
 
 class TestAnimal(unittest.TestCase):
 
@@ -19,6 +20,17 @@ class TestAnimal(unittest.TestCase):
     def test_coordinates(self):
         self.animal.update_coordinates(15, 4)
         self.assertEqual(self.animal.coordinates, (15,4))
+
+class TestDog(unittest.TestCase):
+
+    def setUp(self):
+        self.dog = Dog()
+
+    def test_legs(self):
+        self.assertEqual(self.dog.legs, 4)
+
+    def test_sound(self):
+        self.assertEqual(self.dog.sound, 'barks')
 
 if __name__ == '__main__':
     unittest.main()

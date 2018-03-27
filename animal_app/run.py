@@ -10,7 +10,7 @@ print('parent relative path', parent_relative_path)
 root_path = os.path.abspath(parent_relative_path)
 print('root path', root_path)
 
-sys.path.append('/Users/jorescobar/python_tests')
+sys.path.append(root_path)
 
 from animal_app.canine.dog import Dog
 

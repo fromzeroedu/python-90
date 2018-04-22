@@ -10,3 +10,18 @@ class Animal:
 
     def make_sound(self):
         return self.sound
+
+class Dog(Animal):
+    def __init__(self):
+        self.legs = 4
+        self.wings = False
+        self.sound = 'barks'
+
+    def is_thirsty(self):
+        return 'pants'
+
+fido = Dog()
+print(fido.make_sound())
+print(fido.is_thirsty())
+fido.update_coordinates(4, 6)
+print(fido.coordinates)
